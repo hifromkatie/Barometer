@@ -1,0 +1,299 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Timer_RTC:DS1307+ U1
+U 1 1 5F4FE7BE
+P 6800 4800
+F 0 "U1" H 7344 4846 50  0000 L CNN
+F 1 "DS1307+" H 7344 4755 50  0000 L CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 6800 4300 50  0001 C CNN
+F 3 "https://datasheets.maximintegrated.com/en/ds/DS1307.pdf" H 6800 4600 50  0001 C CNN
+	1    6800 4800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Crystal Y1
+U 1 1 5F4FF0CC
+P 5650 4950
+F 0 "Y1" V 5550 4650 50  0000 L CNN
+F 1 "32.768KHz" V 5650 4400 50  0000 L CNN
+F 2 "Crystal:Crystal_C38-LF_D3.0mm_L8.0mm_Horizontal_1EP_style1" H 5650 4950 50  0001 C CNN
+F 3 "~" H 5650 4950 50  0001 C CNN
+	1    5650 4950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5650 4800 5950 4800
+Wire Wire Line
+	5950 4800 5950 4900
+Wire Wire Line
+	5950 4900 6300 4900
+Wire Wire Line
+	5650 5100 5950 5100
+Wire Wire Line
+	5950 5100 5950 5000
+Wire Wire Line
+	5950 5000 6300 5000
+$Comp
+L power:GND #PWR04
+U 1 1 5F5031C1
+P 6800 5500
+F 0 "#PWR04" H 6800 5250 50  0001 C CNN
+F 1 "GND" H 6805 5327 50  0000 C CNN
+F 2 "" H 6800 5500 50  0001 C CNN
+F 3 "" H 6800 5500 50  0001 C CNN
+	1    6800 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 5200 6800 5500
+$Comp
+L Device:Battery_Cell BT1
+U 1 1 5F503AB8
+P 7200 4100
+F 0 "BT1" V 7455 4150 50  0000 C CNN
+F 1 "3V" V 7364 4150 50  0000 C CNN
+F 2 "Custom-Batt:Varta_CR2032" V 7200 4160 50  0001 C CNN
+F 3 "~" V 7200 4160 50  0001 C CNN
+	1    7200 4100
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6800 4400 6800 4100
+Wire Wire Line
+	6800 4100 7000 4100
+$Comp
+L power:GND #PWR05
+U 1 1 5F504F36
+P 7400 4200
+F 0 "#PWR05" H 7400 3950 50  0001 C CNN
+F 1 "GND" H 7405 4027 50  0000 C CNN
+F 2 "" H 7400 4200 50  0001 C CNN
+F 3 "" H 7400 4200 50  0001 C CNN
+	1    7400 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7300 4100 7400 4100
+Wire Wire Line
+	7400 4100 7400 4200
+$Comp
+L power:+5V #PWR03
+U 1 1 5F505497
+P 6700 3850
+F 0 "#PWR03" H 6700 3700 50  0001 C CNN
+F 1 "+5V" H 6715 4023 50  0000 C CNN
+F 2 "" H 6700 3850 50  0001 C CNN
+F 3 "" H 6700 3850 50  0001 C CNN
+	1    6700 3850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 3850 6700 3950
+$Comp
+L Connector:Conn_01x08_Male J1
+U 1 1 5F5072D1
+P 2700 2150
+F 0 "J1" H 2808 2631 50  0000 C CNN
+F 1 "Conn_01x08_Male" H 2808 2540 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 2700 2150 50  0001 C CNN
+F 3 "~" H 2700 2150 50  0001 C CNN
+	1    2700 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x03_Male J3
+U 1 1 5F50F798
+P 9650 1550
+F 0 "J3" H 9622 1482 50  0000 R CNN
+F 1 "Conn_01x03_Male" H 9622 1573 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Horizontal" H 9650 1550 50  0001 C CNN
+F 3 "~" H 9650 1550 50  0001 C CNN
+	1    9650 1550
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3350 2550 3700 2550
+Wire Wire Line
+	3350 2600 3350 2550
+$Comp
+L power:GND #PWR02
+U 1 1 5F50CD77
+P 3350 2600
+F 0 "#PWR02" H 3350 2350 50  0001 C CNN
+F 1 "GND" H 3355 2427 50  0000 C CNN
+F 2 "" H 3350 2600 50  0001 C CNN
+F 3 "" H 3350 2600 50  0001 C CNN
+	1    3350 2600
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR01
+U 1 1 5F50BFF3
+P 3150 2400
+F 0 "#PWR01" H 3150 2250 50  0001 C CNN
+F 1 "+5V" H 3165 2573 50  0000 C CNN
+F 2 "" H 3150 2400 50  0001 C CNN
+F 3 "" H 3150 2400 50  0001 C CNN
+	1    3150 2400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x08_Male J2
+U 1 1 5F50ABAE
+P 3900 2150
+F 0 "J2" H 4008 2631 50  0000 C CNN
+F 1 "Conn_01x08_Male" H 4008 2540 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x08_P2.54mm_Vertical" H 3900 2150 50  0001 C CNN
+F 3 "~" H 3900 2150 50  0001 C CNN
+	1    3900 2150
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 2550 3350 2550
+Connection ~ 3350 2550
+$Comp
+L power:+5V #PWR06
+U 1 1 5F528551
+P 9150 1400
+F 0 "#PWR06" H 9150 1250 50  0001 C CNN
+F 1 "+5V" H 9165 1573 50  0000 C CNN
+F 2 "" H 9150 1400 50  0001 C CNN
+F 3 "" H 9150 1400 50  0001 C CNN
+	1    9150 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9150 1400 9150 1450
+Wire Wire Line
+	9150 1450 9450 1450
+$Comp
+L power:GND #PWR07
+U 1 1 5F52BF52
+P 8950 1600
+F 0 "#PWR07" H 8950 1350 50  0001 C CNN
+F 1 "GND" H 8955 1427 50  0000 C CNN
+F 2 "" H 8950 1600 50  0001 C CNN
+F 3 "" H 8950 1600 50  0001 C CNN
+	1    8950 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8950 1600 8950 1550
+Wire Wire Line
+	9150 1650 9450 1650
+$Comp
+L Device:R R3
+U 1 1 5F52C643
+P 9150 1900
+F 0 "R3" V 8943 1900 50  0000 C CNN
+F 1 "470" V 9034 1900 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 9080 1900 50  0001 C CNN
+F 3 "~" H 9150 1900 50  0001 C CNN
+	1    9150 1900
+	1    0    0    -1  
+$EndComp
+Text GLabel 9050 2250 0    50   Input ~ 0
+Neopixel_in
+Wire Wire Line
+	9150 1750 9150 1650
+Wire Wire Line
+	8950 1550 9450 1550
+Wire Wire Line
+	9150 2050 9150 2250
+Wire Wire Line
+	9050 2250 9150 2250
+Text GLabel 5600 4600 0    50   Input ~ 0
+RTC_SCL
+Text GLabel 5700 4700 0    50   Input ~ 0
+RTC_SDA
+$Comp
+L Device:R R1
+U 1 1 5F552CD4
+P 5950 4250
+F 0 "R1" H 5700 4350 50  0000 L CNN
+F 1 "10K" H 5700 4250 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 5880 4250 50  0001 C CNN
+F 3 "~" H 5950 4250 50  0001 C CNN
+	1    5950 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5F5532B6
+P 6150 4400
+F 0 "R2" H 6220 4446 50  0000 L CNN
+F 1 "10K" H 6220 4355 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6080 4400 50  0001 C CNN
+F 3 "~" H 6150 4400 50  0001 C CNN
+	1    6150 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 4550 6150 4700
+Wire Wire Line
+	6150 4700 6300 4700
+Wire Wire Line
+	5700 4700 6150 4700
+Connection ~ 6150 4700
+Wire Wire Line
+	5600 4600 5950 4600
+Wire Wire Line
+	5950 4400 5950 4600
+Connection ~ 5950 4600
+Wire Wire Line
+	5950 4600 6300 4600
+Wire Wire Line
+	5950 4100 5950 3950
+Wire Wire Line
+	5950 3950 6150 3950
+Connection ~ 6700 3950
+Wire Wire Line
+	6700 3950 6700 4400
+Wire Wire Line
+	6150 4250 6150 3950
+Connection ~ 6150 3950
+Wire Wire Line
+	6150 3950 6700 3950
+Wire Wire Line
+	3150 2400 3150 2450
+Wire Wire Line
+	3150 2450 3700 2450
+Text GLabel 3200 1250 0    50   Input ~ 0
+RTC_SCL
+Text GLabel 3200 1400 0    50   Input ~ 0
+RTC_SDA
+Wire Wire Line
+	3200 1400 3300 1400
+Wire Wire Line
+	3300 1400 3300 2350
+Wire Wire Line
+	3300 2350 3700 2350
+Wire Wire Line
+	3700 2250 3350 2250
+Wire Wire Line
+	3350 2250 3350 1250
+Wire Wire Line
+	3350 1250 3200 1250
+Text GLabel 3200 900  0    50   Input ~ 0
+Neopixel_in
+Wire Wire Line
+	3200 900  3400 900 
+Wire Wire Line
+	3400 900  3400 1850
+Wire Wire Line
+	3400 1850 3700 1850
+$EndSCHEMATC
